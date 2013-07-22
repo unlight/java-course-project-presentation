@@ -1,0 +1,1 @@
+GoogleChromePortable\GoogleChromePortable.exe --kiosk "%~dp0index.html"
