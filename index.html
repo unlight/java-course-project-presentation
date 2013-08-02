@@ -13,81 +13,135 @@
 		<p>Васильев Роман, ACCP-1209A</p>
 	</header>
 
-	<!-- Титульный слайд ФИО ГРУППА ТЕМА ПРОЕКТА -->
+	
  	<div class="slide" id="Title"><div>
 		<section>
 			<header>
 				<h1>Курсовой проект</h1>
 				<h2>Телефонная записная книжка</h2>
 			</header>
-			<!-- <p>Описание?</p> -->
+			<p>Приложение позволяет хранить записи о телефонных номерах их некоторых данные их владельцев: имя, дату рождения, фотографию.</p>
 			
 			<p>Васильев Роман, ACCP-1209A</p>
 			<p></p>
 		</section>
 	</div></div>
 
-	<!-- Рассказать какова цель проекта, капитан, разработка того-то с определенными функциями, изучение и отработка навыков JavaSE. -->
-	<div class="slide" id="Dummy"><div>
+	
+	<div class="slide" id="Targets"><div>
 			<section>
 				<header>
-				<h1>Цели из задачи проекта</h1>
+				<h1>Цели и задачи</h1>
 				</header>
 				<ul>
-					<li>Разработка приложения на Java с испольованием встроенной реляционной СУБД</li>
+					<li>Разработка приложения на Java с использованием встроенной реляционной СУБД</li>
+					<li>Изучение интегрированной среды разработки (IDE) NetBeans</li>
 					<li>Получение практических навыков в области ООП (JavaSE в частности)</li>
+					<li>Знакомство интерфейсом JDBC (Java DataBase Connectivity)</li>
 				</ul>
 			</section>
 		</div></div> 
 
-<!-- Схема (mvc), логическая структура, модули чтения, записи, отрисовки, взаимодействия с пользователем, как взаимодействуует -->
-	<div class="slide" id="Dummy"><div>
+
+	<div class="slide" id="Tools"><div>
 			<section>
 				<header>
+					<h1>Инструменты и технологии</h1>
 				</header>
-				<p></p>
+				<ol>
+					<li>IDE NetBeans - Интегрированная среда разработки</li>
+					<li>Sublime-Text-3 — текстовый редактор с подсветкой кода</li>
+				</ol>
 			</section>
 		</div></div> 
 
 
-<!-- Физическая структура -->
-<div class="slide" id="Dummy"><div>
-			<section>
-				<header>
-				</header>
-				<p></p>
-			</section>
-		</div></div> 
 
-<!-- Схема классов (схема таблиц, если БД используется) -->
-<div class="slide" id="Dummy"><div>
+<div class="slide" id="ThirdParty"><div>
 			<section>
 				<header>
+					<h1>Библиотеки сторонних разрабочиков</h1>
 				</header>
-				<p></p>
-			</section>
-		</div></div> 
-
-<!-- Используемые технологии (netbeans) сторонние библиотеки, если база данных писать. Сказать о коллекции потоки то что прошли. -->
-<div class="slide" id="Dummy"><div>
-			<section>
-				<header>
-				</header>
-				<p></p>
-			</section>
-		</div></div> 
-
-<!-- Демонстрация без IDE -->
-<div class="slide" id="Dummy"><div>
-			<section>
-				<header>
-				</header>
-				<p></p>
+				<ol>
+<li>sqlite-jdbc - коннектор jdbc для SQLite от авторов</li>
+<li>nachocalendar - виджет для удобного выбора даты (как бумажном в календарике)</li>
+<li>filedrop - удобное перетаскивание файлов (drag'n'drop)</li>
+				</ol>
 			</section>
 		</div></div> 
 
 
-<!-- Пути развития программы, кому может понадобиться -->
+<div class="slide" id="Scheme"><div>
+			<section>
+				<header>
+					<h1>Схема работы</h1>
+				</header>
+				<div style="text-align: center">
+					<img src="Resources/mvc.png" style="max-width: 55%;"/>
+			</div>
+			</section>
+		</div></div> 
+
+
+<div class="slide" id="Structure"><div>
+			<section>
+				<header>
+					<h1>Структура приложения</h1>
+				</header>
+				<ul style="">
+<li>Классы сущностей, являются представлением записи (строки) в таблице базы данных</li>
+<li>Слушатели, подписываются на события, и выполняются при выполнение каких либо действий пользователем (нажатие на кнопку, и т.д.)</li>
+<li>Визуальные компоненты стандартные (меню, текстовое поле, список, и т.д.)</li>
+<li>Модели, осуществляют работу с базой данных</li>
+<li>Коллекция классов SqlBuilder, для удобного формирования sql-запросов, утилиты для работы со строками</li>
+
+
+				</ul>
+			</section>
+		</div></div> 
+
+
+<div class="slide" id="Database"><div>
+			<section>
+				<header>
+					<h1>Структура базы данных</h1>
+				</header>
+				<div style="text-align: center">
+					<img src="Resources/schema.png" style=""/>
+					</div>
+<!-- 				<ul>
+<li>Записи (Entry): основная таблица где хранятся все данные</li>
+<li>Категории (Category): связана отношение один ко многим с таблицей Entry</li>
+<li>Картинки (Picture): отношение многие ко многим с таблицей Entry</li>
+				</ul> -->
+			</section>
+		</div></div> 
+
+
+<div class="slide" id="Show"><div>
+		<section>
+			<header>
+				<h1>Демонстрация</h1>
+			</header>
+
+		</section>
+	</div></div> 
+
+	<div class="slide" id="NextDevelop"><div>
+		<section>
+			<header>
+				<h1>Дальнейшее развитие</h1>
+			</header>
+			<ul>
+<li>Добавить AutoCompleteDecorator для поля "Категория"</li>
+<li>Импортировать контакты из социальных сетей</li>
+<li>Напоминание о днях рождения</li>
+			</ul>
+		</section>
+	</div></div> 
+
+
+
 	<div class="slide" id="Thanks"><div>
 		<section>
 			<header>
@@ -103,7 +157,7 @@
 
 
 	
-<!-- 	
+<!--
 <div class="slide" id="Dummy"><div>
 		<section>
 			<header>
